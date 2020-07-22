@@ -15,12 +15,11 @@ font-family: 'Rowdies', cursive; */
 }
 
 body {
-    height: 200vh;
+    background-color: #eee;
 }
 
 div.wrapper {
     width: 85vw;
-    background-color: #eee;
     margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
 }
@@ -38,7 +37,7 @@ div.logo {
     left: 40px;
 }
 
-div.logo h1 {
+h1.title {
     font-style: italic;
 }
 
@@ -98,17 +97,13 @@ aside div.socials a i {
     transition: .3s;
 }
 
-aside div.socials a:nth-of-type(1):hover i,
-aside div.socials a:nth-of-type(2):hover i,
-aside div.socials a:nth-of-type(3):hover i,
-aside div.socials a:nth-of-type(4):hover i,
-aside div.socials a:nth-of-type(5):hover i,
-aside div.socials a:nth-of-type(2):hover i {
+aside div.socials a:hover i {
     color: red;
     transform: scale(1.7) rotate(360deg);
 }
 
-div.messenger i {
+div.messenger a i {
+    color: black;
     cursor: pointer;
     position: fixed;
     bottom: 40px;
@@ -121,7 +116,7 @@ div.messenger i {
 
 }
 
-div.messenger i:hover {
+div.messenger a i:hover {
     color: blue;
     transform: scale(1.2);
     animation-play-state: paused;
@@ -143,4 +138,213 @@ div.messenger i:hover {
     100% {
         bottom: 40px;
     }
+}
+
+main {
+    position: relative;
+    height: 75vh;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Rowdies'; */
+}
+
+main h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+main h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+div.arrow {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 75vh - 70px)
+}
+
+div.arrow a img {
+    height: 15vh;
+    margin-left: calc(50% - 7.5vh);
+    animation: arrow 1.2s infinite linear;
+    /* animation-fill-mode: both; */
+}
+
+@keyframes arrow {
+    0% {
+        margin-top: 0;
+    }
+
+    25% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 30px;
+    }
+
+    85% {
+        margin-top: 30px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+section.ad {
+    position: relative;
+    height: 50vh;
+    background-color: darkorange;
+}
+
+section.ad article {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+
+section.ad article h1 {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+}
+
+section.ad article p:nth-of-type(1) {
+    font-size: 1.5rem;
+    max-width: 50%;
+    margin-top: 20px;
+}
+
+section.ad article button {
+    background-color: transparent;
+    border: 4px solid black;
+    padding: 15px 50px;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    transition: .2s;
+}
+
+section.ad article button:hover {
+    color: white;
+    border-color: white;
+    cursor: pointer;
+    transform: scale(1.02)
+}
+
+section.ad article p:nth-of-type(2) {
+    max-width: 50%;
+    margin-top: 30px;
+}
+
+section.ad img {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    height: calc(50vh*0.9);
+    left: 60%;
+}
+
+footer {
+    position: relative;
+    height: 30vh;
+    background-color: #222;
+    margin-bottom: 70px;
+    color: white;
+}
+
+footer h1.title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 3rem;
+}
+
+footer div.socials-footer {
+    position: absolute;
+    top: 42%;
+    left: 9%;
+    font-size: 2.5rem;
+}
+
+footer div.socials-footer a i {
+    color: white;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+footer div.socials-footer a:nth-of-type(1) i {
+    margin-left: 0;
+}
+
+footer div.socials-footer a i:hover {
+    color: darkorange;
+    transform: scale(1.1);
+}
+
+footer p:nth-child(3) {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translateX(8%);
+}
+
+footer div.newsletter {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    padding: 10px 10px 20px;
+    border: 3px solid darkorange;
+}
+
+footer div.newsletter h3 {
+    font-size: 1.8rem;
+}
+
+footer div.newsletter p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer div.newsletter input {
+    display: block;
+    margin-top: 2px;
+    width: 400px;
+    font-size: 22px;
+    padding: 5px 10px;
+    border: 1px solid darkorange;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+}
+
+footer div.newsletter button {
+    background-color: transparent;
+    border: 1px solid darkorange;
+    color: white;
+    width: 120px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: calc(200px - 60px);
+    border-radius: 40px;
+}
+
+footer div.newsletter button:hover {
+    cursor: pointer;
+    background-color: darkorange;
+    border-color: white;
 }
